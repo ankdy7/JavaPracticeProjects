@@ -5,6 +5,7 @@ public class OccurenceOfEachCharInString2 {
 
         String s="abbbcadeeaaaacccbbbbeeee";
         LinkedHashMap<Character, Integer> hm = new LinkedHashMap<>();
+        LinkedHashMap<Character, Integer> dup = new LinkedHashMap<>();
         int count;
         char [] ar = s.toCharArray();
         for(char ch : ar){
@@ -13,6 +14,10 @@ public class OccurenceOfEachCharInString2 {
                 if(ch == ar[i]){
                     count++;
                 }
+            }
+
+            if(count>1){
+                dup.put(ch,count);
             }
             hm.put(ch, count);
         }
@@ -25,7 +30,8 @@ public class OccurenceOfEachCharInString2 {
 //            System.out.println(key + " " + value);
 //        }
 
-        hm.forEach((key, value) -> System.out.println(key + " " + value));
+        //hm.forEach((key, value) -> System.out.println(key + " " + value));
+        dup.forEach((key, value) -> System.out.println(key + " " + value));
 
     }
 }
