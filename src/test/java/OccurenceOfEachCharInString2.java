@@ -17,10 +17,15 @@ public class OccurenceOfEachCharInString2 {
             hm.put(ch, count);
         }
 
-        for (Character name: hm.keySet()) {
-            String key = name.toString();
-            String value = hm.get(name).toString();
-            System.out.println(key + " " + value);
-        }
+//        System.out.println(hm);
+//
+//        for (Character name: hm.keySet()) {
+//            String key = name.toString();
+//            String value = hm.get(name).toString();
+//            System.out.println(key + " " + value);
+//        }
+
+        hm.forEach((key, value) -> System.out.println(key + " " + value));
+
     }
 }
