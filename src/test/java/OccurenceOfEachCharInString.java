@@ -27,7 +27,7 @@ public class OccurenceOfEachCharInString {
 
             // Output the count if it's greater than 0
             if (count > 0) {
-                System.out.print(currentChar +""+ count);
+                System.out.print(currentChar + "" + count);
             }
         }
     }
